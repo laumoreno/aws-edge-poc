@@ -6,15 +6,17 @@ services:
     container_name: yolo
     volumes:
       - ./yolo-client:/workspace
+    env_file:
+      - common.env
     stdin_open: true
     tty: true
-    ports:
-     - 4008:4008
   
-  gst-container:
+  gst:
     build: ./gstreamer-sandbox/src
-    container_name: gst-container
+    container_name: gst
     volumes:
       - ./gstreamer-sandbox/src:/workspace
+    env_file:
+      - common.env
     stdin_open: true
     tty: true
