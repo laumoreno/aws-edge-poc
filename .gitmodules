@@ -1,6 +1,6 @@
 [submodule "gstreamer-sandbox"]
 	path = gstreamer-sandbox
-	url = git@github.com:fgr-17/yolo-client.git
+	url = git@github.com:fgr-17/gstreamer-sandbox.git
 	branch = develop
 [submodule "yolo-client"]
 	path = yolo-client
