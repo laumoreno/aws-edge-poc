@@ -18,16 +18,22 @@ Must have docker and docker compose installed.
 docker-compose build
 ```
 
-2. Get inside yolo container by executing:
+2. Start containers and shared network by executing:
 
 ```bash
-docker compose run yolo bin/bash
+docker compose up -d
+```
+
+3. Get inside yolo container by executing:
+
+```bash
+docker exec -it yolo /bin/bash
 ```
 
 3. Get inside gstreamer container by executing:
 
 ```bash
-docker compose run gst-container bin/bash
+docker exec -it gst /bin/bash
 ```
 
 All container's shells will have an assigned ip sharing same subnetwork, useful for client/server test
